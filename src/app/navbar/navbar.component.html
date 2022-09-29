@@ -1,1 +1,8 @@
-<p>navbar works!</p>
+<p-menubar [model]="items" [style]="{'background-color': 'orange'}">
+  <ng-template pTemplate="start">
+      <img src="assets/primeng.png" height="40" class="mr-2">
+  </ng-template>
+  <ng-template pTemplate="end">
+      <input type="text" pInputText placeholder="Buscar">
+  </ng-template>
+</p-menubar>
