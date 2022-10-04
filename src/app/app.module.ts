@@ -8,7 +8,7 @@ import {MenubarModule} from 'primeng/menubar';
 import {InputTextModule} from 'primeng/inputtext';
 import { CardComponent } from './card/card.component';
 import {CardModule} from 'primeng/card';
-import { CardLaboralComponent } from './card-laboral/card-laboral.component';
+
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { CardLaboralComponent } from './card-laboral/card-laboral.component';
     AppComponent,
     NavbarComponent,
     CardComponent,
-    CardLaboralComponent
+
   ],
   imports: [
     BrowserModule,

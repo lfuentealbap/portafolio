@@ -1,8 +1,14 @@
 <app-navbar></app-navbar>
-<h1 style="color: magenta;">Hello world</h1>
-<p style="color: purple;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo suscipit deserunt incidunt non, rerum provident? Ullam beatae ea delectus placeat vero maxime repellendus perferendis laudantium. Delectus officiis in iusto nisi?</p>
-<div style="display: flex;">
-  <app-card style="margin-right: 10px;"></app-card>
-  <app-card-laboral></app-card-laboral>
-
+<div style="display: flex; margin-bottom: 10px;">
+  <img src="assets/y0.jpg" alt="y0" style="margin-top:17px; width: 250px; height:250px; border-style: groove; border-radius: 25px;">
+  <div style="width: 50%; margin-left: 10px;">
+    <h1 style="color: #303233;">Luis Fuentealba Pérez</h1>
+  <p style="color: #46494b;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo suscipit deserunt incidunt non, rerum provident? Ullam beatae ea delectus placeat vero maxime repellendus perferendis laudantium. Delectus officiis in iusto nisi?</p>
+  </div>
 </div>
+<div style="display: flex;">
+  <ng-container *ngFor="let item of content">
+    <app-card style="margin-right: 10px;"  [content]="item"></app-card>
+  </ng-container>
+</div>
+
