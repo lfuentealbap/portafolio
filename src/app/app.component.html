@@ -1,12 +1,11 @@
-<app-navbar></app-navbar>
-<div style="display: flex; margin-bottom: 10px;">
-  <img src="assets/y0.jpg" alt="y0" style="margin-top:17px; width: 250px; height:250px; border-style: groove; border-radius: 25px;">
-  <div style="width: 50%; margin-left: 10px;">
-    <h1 style="color: #303233;">Luis Fuentealba Pérez</h1>
-  <p style="color: #46494b;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo suscipit deserunt incidunt non, rerum provident? Ullam beatae ea delectus placeat vero maxime repellendus perferendis laudantium. Delectus officiis in iusto nisi?</p>
-  </div>
+<app-navbar ></app-navbar>
+<app-presentation *ngIf="!loading"></app-presentation>
+
+<div style="width:100%; height:100%; text-align: center;" >
+  <p-progressSpinner *ngIf="loading"></p-progressSpinner>
 </div>
-<div style="display: flex;">
+
+<div class="card-c" style="display: flex;" *ngIf="!loading">
   <ng-container *ngFor="let item of content">
     <app-card style="margin-right: 10px;"  [content]="item"></app-card>
   </ng-container>

@@ -1,9 +1,9 @@
-<p-card [header]="content.header" [style]="{'width': '25rem', 'margin-bottom': '2em', 'background-color': 'rgba(215,215,215,0.1)',
+<p-card [header]="content.header" [style]="{'width': '25rem','height':'35rem' ,'margin-bottom': '2em', 'background-color': 'rgba(215,215,215,0.1)',
 'background-image': 'linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0.5))', 'text-align': 'center'}" styleClass="p-shadow-1">
   <ng-template pTemplate="header">
       <img alt="Card" src="https://www.primefaces.org/primeng/assets/showcase/images/usercard.png">
   </ng-template>
-    <img [src]="content.img" alt="UBB" style="height: 100px; width: 100px;">
+    <img [src]="content.img" alt="UBB" class="logo">
   <p style="margin-top: 0px;"><i>{{content.date}}</i></p>
   <p style="text-align: left;"> <strong>{{content.text1}}: </strong> {{content.text2}}</p>
 </p-card>

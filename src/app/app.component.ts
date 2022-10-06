@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'portafolio';
-  content: any = [
+  loading:boolean = true;
+  content: any = [];
+  constructor() {}
+  ngOnInit(): void {
+    setTimeout( ()=> {
+      this.setData();
+    },
+    2000);
+  }
+  setData(){
+    this.loading = false;
+    this.content = [
+
     {
       header: 'Formación Académica',
       img: 'https://ubiobio.cl/w/img/Escudo-UBB.svg',
@@ -22,9 +34,7 @@ export class AppComponent implements OnInit {
       text1: 'Técnico en terreno',
       text2: 'encargado de realizar instalaciones de computadores a empresas como Caja Los Andes, Caja 18, reparaciones de impresoras a Registro Civil. Estos servicios se realizan desde Curicó hasta Angol'
     }
-  ]
-  constructor() {}
-  ngOnInit(): void {
 
+    ]
   }
 }
